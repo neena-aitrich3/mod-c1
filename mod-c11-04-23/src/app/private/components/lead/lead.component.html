@@ -1,0 +1,13 @@
+
+<span class="h6 text-uppercase" ><u>Lead-Chart</u></span>
+<div style="width: 30%; float: right;"><select  class="form-select"  name="Ppub" #selectid value="" (change)="setFiltervalue($event)"  >
+    <option *ngFor="let entity of entities; let i = index"
+    value="{{entity.name}}" [selected]="i == 3 ? true : null" 
+    (onload)="fooFunction(i, entity.name)"> {{entity.name}}</option>
+    <!-- <option value="" >TODAY</option>
+    <option value="" >YESTERDAY</option>
+    <option value="" >WTD</option>
+    <option value=""  >MTD</option>
+    <option value="" >CUSTOM</option> -->
+  </select></div>
+<canvas #canvas id="myChart1"  ></canvas>
